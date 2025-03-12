@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Holi Wishes</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffeb3b, #ff5722, #e91e63, #3f51b5, #4CAF50, #FFC107);
+            background-size: 400% 400%;
+            animation: bgAnimation 10s infinite alternate;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        @keyframes bgAnimation {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        .container {
+            position: relative;
+            width: 90%;
+            max-width: 600px;
+        }
+        h1 {
+            font-size: 15vw; 
+            background: linear-gradient(90deg, #ff5722, #e91e63, #3f51b5, #FFC107, #4CAF50);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: pulse 3s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        p {
+            font-size: 5vw;
+            color: #4CAF50;
+            animation: fadeIn 3s ease-in-out;
+        }
+        .btn {
+            background-color: #E91E63;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            font-size: 4vw;
+            cursor: pointer;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            animation: bounce 2s infinite;
+        }
+        .vinesh{
+            font-size: 3vw;
+            padding-top: 30px;
+            color: white;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @media (min-width: 600px) {
+            h1 { font-size: 120px; }
+            p { font-size: 28px; }
+            .btn { font-size: 20px; }
+        }
+        @media (max-width: 600px) {
+            .container {
+                width: 100%;
+                padding: 20px;
+            }
+            h1 { font-size: 80px; }
+            p { font-size: 20px; }
+            .btn { font-size: 18px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Holi!</h1>
+        <p>May your life be filled with vibrant colors and endless joy!</p>
+        <button class="btn" onclick="showMessage()">Get a Holi Message</button>
+        <div class="vinesh">VINESH GAIKAWAD</div>
+    </div>
+
+    <script>
+        function showMessage() {
+            const messages = [
+                "Wishing you a Holi full of happiness!",
+                "May this Holi fill your life with colors of joy!",
+                "Celebrate this Holi with love and laughter!",
+                "Spread the colors of peace and positivity this Holi!"
+            ];
+            alert(messages[Math.floor(Math.random() * messages.length)]);
+        }
+    </script>
+</body>
+</html>
